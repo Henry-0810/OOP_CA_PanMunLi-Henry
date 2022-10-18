@@ -93,8 +93,11 @@ public class Country {
         for (int i = 0; i < getCities().length; i++) {
             if (getCities()[i].getPopulation() > maxPop) {
                 maxPop = getCities()[i].getPopulation();
-                return getCities()[i];
             }
+        }
+        for (int i = 0; i < getCities().length; i++) {
+            if(getCities()[i].getPopulation() == maxPop)
+                return getCities()[i];
         }
         return null;
     }
